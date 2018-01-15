@@ -1,30 +1,153 @@
+// 页面适配
+// 项目的中的所有单位均采用需调用  rem(视觉图的像素值) 方法计算相应的虚拟像素值
+$vm_fontsize: 36;
+$vm_design: 360; // 根据需要替换成设计稿的值
+@function rem($px) {
+  @return ($px / $vm_fontsize) * 1rem;
+}
+
+$action-sheet-ios-button-font-size: rem(20);
+$action-sheet-ios-title-font-size: rem(13);
+$action-sheet-md-button-font-size: rem(16);
+$action-sheet-md-icon-font-size: rem(24);
+$action-sheet-md-title-font-size: rem(16);
+$action-sheet-wp-button-font-size: rem(15);
+$action-sheet-wp-icon-font-size: rem(24);
+$action-sheet-wp-title-font-size: rem(20);
+$badge-font-size: rem(13);
+$button-ios-font-size: rem(16);
+$button-ios-large-font-size: rem(20);
+$button-ios-small-font-size: rem(13);
+$button-ios-small-icon-font-size: rem(13);
+$button-md-font-size: rem(14);
+$button-md-large-font-size: rem(20);
+$button-md-small-font-size: rem(13);
+$button-md-small-icon-font-size: rem(14);
+$button-wp-font-size: rem(14);
+$button-wp-large-font-size: rem(20);
+$button-wp-small-font-size: rem(13);
+$button-wp-small-icon-font-size: rem(13);
+$card-ios-font-size: rem(14);
+$card-ios-header-font-size: rem(16);
+$card-ios-title-font-size: rem(18);
+$card-md-font-size: rem(14);
+$card-md-header-font-size: rem(16);
+$card-md-title-font-size: rem(24);
+$card-wp-font-size: rem(14);
+$card-wp-header-font-size: rem(16);
+$card-wp-title-font-size: rem(24);
+$font-size-base: rem(14);
+$font-size-ios-base: $font-size-base;
+$font-size-ios-base: $font-size-base;
+$font-size-md-base: $font-size-base;
+$font-size-md-base: $font-size-base;
+$font-size-wp-base: $font-size-base;
+$font-size-wp-base: $font-size-base;
+$h1-font-size: rem(26);
+$h2-font-size: rem(24);
+$h3-font-size: rem(22);
+$h4-font-size: rem(20);
+$h5-font-size: rem(18);
+$h6-font-size: rem(16);
+$item-ios-body-text-font-size: rem(17);
+$item-ios-paragraph-font-size: rem(14);
+$item-md-body-text-font-size: rem(14);
+$item-md-divider-font-size: $item-md-body-text-font-size;
+$item-md-font-size: rem(16);
+$item-wp-body-text-font-size: rem(14);
+$item-wp-divider-font-size: rem(20);
+$item-wp-font-size: rem(16);
+$list-ios-header-font-size: rem(12);
+$list-md-header-font-size: rem(14);
+$list-wp-header-font-size: rem(20);
+$searchbar-wp-input-font-size: rem(14);
+$segment-button-ios-font-size: rem(13);
+$segment-button-ios-toolbar-font-size: rem(12);
+$segment-button-md-font-size: rem(12);
+$segment-button-wp-font-size: rem(13);
+$tabs-md-tab-font-size: rem(12);
+$tabs-md-tab-font-size-active: rem(14);
+$tabs-wp-tab-font-size: rem(12);
+$toast-ios-title-font-size: rem(14);
+$toast-md-title-font-size: rem(15);
+$toast-wp-title-font-size: rem(14);
+$toolbar-ios-button-font-size: rem(17);
+$toolbar-ios-title-font-size: rem(17);
+$toolbar-md-button-font-size: rem(14);
+$toolbar-md-title-font-size: rem(20);
+$toolbar-wp-button-font-size: rem(14);
+$toolbar-wp-title-font-size: rem(15);
+$action-sheet-ios-button-min-height: rem(48);
+$action-sheet-ios-title-padding: rem(15);
+$action-sheet-md-button-min-height: rem(48);
+$action-sheet-md-icon-width: rem(23);
+$action-sheet-wp-button-height: rem(48);
+$action-sheet-wp-icon-width:rem(23);
+$alert-wp-input-line-height:rem(30);
+$button-ios-margin-bottom: rem(4);
+$button-ios-margin-end: rem(2);
+$button-ios-margin-start:rem(2);
+$button-ios-margin-top: rem(4);
+$button-md-height: rem(36);
+$button-md-margin-bottom: rem(4);
+$button-md-margin-end: rem(2);
+$button-md-margin-start:rem(2);
+$button-md-margin-top: rem(4);
+$button-round-padding-end: rem(26);
+$button-wp-height: rem(36);
+$button-wp-margin-bottom :rem(4);
+$button-wp-margin-end: rem(2);
+$button-wp-margin-start: rem(2);
+$button-wp-margin-top:rem(4);
+$list-ios-header-letter-spacing:rem(1);
+$list-md-header-min-height:rem(45);
+$searchbar-ios-input-height:rem(30);
+$searchbar-md-input-line-height:rem(30);
+$searchbar-wp-input-line-height:rem(30);
+$segment-button-ios-height: rem(32);
+$segment-button-ios-icon-line-height: rem(28);
+$segment-button-ios-icon-size: rem(26);
+$segment-button-ios-line-height:rem(30);
+$segment-button-ios-toolbar-button-height: rem(26);
+$segment-button-ios-toolbar-icon-line-height: rem(24);
+$segment-button-ios-toolbar-icon-size:rem(22);
+$segment-button-ios-toolbar-line-height: rem(25);
+$segment-button-md-font-size: rem(12);
+$segment-button-md-height: rem(42);
+$segment-button-md-icon-size: rem(26);
+$segment-button-md-line-height: rem(40);
+$segment-button-wp-height: rem(40);
+$segment-button-wp-icon-size: rem(26);
+$segment-button-wp-line-height: rem(40);
+$tabs-md-tab-font-size-active:rem(14);
+$tabs-md-tab-icon-size:rem(24);
+$tabs-md-tab-min-height:rem(46);
+$tabs-wp-tab-icon-size:rem(24);
+$text-input-wp-line-height:rem(30);
+$toast-ios-border-radius:rem(6.5);
+$toast-ios-title-padding-top:rem(15);
+$toast-wp-title-padding-top:rem(15);
+$segment-button-ios-icon-line-height:rem(28);
+$menu-width:rem(200);
+$menu-small-width:rem(200);
+
+
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
-
 // Font path is used to include ionicons,
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
-
-
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
-
-
 @import "ionic.globals";
-
-
 // Shared Variables
 // --------------------------------------------------
 // To customize the look and feel of this app, you can override
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
-
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -32,57 +155,115 @@ $app-direction: ltr;
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
-
-$colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
-);
-
-
+$colors: ( primary: #488aff, secondary: #32db64, danger: #f53d3d, light: #f4f4f4, dark: #222);
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
-
-
-
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
-
-
-
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
-
-
-
-
 // App Theme
 // --------------------------------------------------
 // Ionic apps can have different themes applied, which can
 // then be future customized. This import comes last
 // so that the above variables are used and Ionic's
 // default are overridden.
-
 @import "ionic.theme.default";
-
-
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
 // http://ionicframework.com/docs/ionicons/
-
 @import "ionic.ionicons";
-
-
 // Fonts
 // --------------------------------------------------
-
 @import "roboto";
 @import "noto-sans";
+
+
+
+//--------------------------自定义字体示例------------------------
+// 把字体文件放在asset中，然后引入
+// @font-face {
+//   font-family: 'Sans';
+//   src: url('../assets/fonts/Sans.otf') format('opentype');
+// }
+
+
+//-------------------------自定义tab图标示例-------------------------
+// 修改Tab的图标和颜色
+// $iconfont-path: "../assets/fonts";
+// @font-face {
+//   font-family: "iconfont";
+//   src: url('iconfont.eot?t=1514257834808');
+//   /* IE9*/
+//   src: url('iconfont.eot?t=1514257834808#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//   url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'), url('iconfont.ttf?t=1514257834808') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+//   url('iconfont.svg?t=1514257834808#iconfont') format('svg');
+//   /* iOS 4.1- */
+// }
+
+// .iconfont {
+//   font-family: "iconfont" !important;
+//   font-size: rem(24);
+//   font-style: normal;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// .icon-home:before {
+//   content: "\e60a";
+// }
+
+// .icon-contact:before {
+//   content: "\e60b";
+// }
+
+// .icon-about:before {
+//   content: "\e60c";
+// }
+
+// .ion-md-custom-home:before,
+// .ion-ios-custom-home:before,
+// .ion-ios-custom-home-outline:before,
+// .ion-md-custom-contact:before,
+// .ion-ios-custom-contact:before,
+// .ion-ios-custom-contact-outline:before,
+// .ion-md-custom-about:before,
+// .ion-ios-custom-about:before,
+// .ion-ios-custom-about-outline:before,
+// {
+//   @extend .iconfont;
+// }
+
+// .ion-ios-custom-home:before {
+//   content: "\e60a";
+// }
+
+// .ion-ios-custom-home-outline:before {
+//   content: "\e60a";
+// }
+
+// .ion-ios-custom-contact:before {
+//   content: "\e60b";
+// }
+
+// .ion-ios-custom-contact-outline:before {
+//   content: "\e60b";
+// }
+
+// .ion-ios-custom-about:before {
+//   content: "\e60c";
+// }
+
+// .ion-ios-custom-about-outline:before {
+//   content: "\e60c";
+// }
+
+// // 修改Tab点击选中颜色
+// $tabs-ios-tab-text-color-active:#F37021;
+// $tabs-ios-tab-icon-color-active:#F37021;
+// $tabs-md-tab-text-color-active:#F37021;
+// $tabs-md-tab-icon-color-active:#F37021;
