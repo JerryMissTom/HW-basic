@@ -6,6 +6,8 @@
 4. 字体库替换
 5. Echarts使用
 6. 通讯录
+7. 数据库的使用
+8. 版本信息
 
 我会抽空将其完善，供大家参考。
 我的博客也放置在 `GitHub` 仓库 [Blog](https://github.com/JerryMissTom/Blog/issues) 上，里面有我在 `ionic` 实践过程中的踩坑心得，可以参考下。
