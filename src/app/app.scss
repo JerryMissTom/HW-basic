@@ -14,8 +14,8 @@
 // automatically applied to the <body> element in the app.
 // 页面适配
 // 根元素大小使用 vw 单位
-$vm_fontsize: 36;
-$vm_design: 360;
+$vm_fontsize: 36; // 是$vm_design 值得十分之一
+$vm_design: 360; // 根据需要替换成设计稿的值,比如设计稿给你的宽度是360px,
 html {
   font-size: ($vm_fontsize / $vm_design) * 100vw; // 同时，通过Media Queries 限制根元素最大最小值
   @media screen and (max-width: 320px) {
@@ -129,6 +129,50 @@ button,
 input,
 textarea {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.back-button-icon-md,
+.back-button-icon-ios {
+  font-size: rem(28);
+}
+
+.back-button-ios {
+  min-height: rem(32);
+}
+
+//icon 定位在页面的右侧,添加在ion-icon 标签上
+.icon-right {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//item固有高度
+.item-block {
+  min-height: rem(44);
+}
+
+//checkbox框样式
+.checkbox-ios .checkbox-icon {
+  border-radius: 4px;
+}
+
+.item.item-ios .checkbox-ios {
+  margin: rem(15) 0;
+  margin-right: rem(9);
+}
+
+//菜单图标
+.bar-button-menutoggle-ios ion-icon {
+  font-size: rem(24);
+}
+
+//icon
+.item>ion-icon,
+.item-inner>ion-icon {
+  font-size: rem(28);
+  min-height: rem(28);
 }
 
 // 时间选择器配置

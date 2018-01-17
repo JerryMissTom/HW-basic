@@ -1,7 +1,7 @@
 // 页面适配
 // 项目的中的所有单位均采用需调用  rem(视觉图的像素值) 方法计算相应的虚拟像素值
-$vm_fontsize: 36;
-$vm_design: 360; // 根据需要替换成设计稿的值
+$vm_fontsize: 36;  // 是$vm_design 值得十分之一
+$vm_design: 360; // 根据需要替换成设计稿的值,比如设计稿给你的宽度是360px,
 @function rem($px) {
   @return ($px / $vm_fontsize) * 1rem;
 }
