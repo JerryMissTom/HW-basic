@@ -14,10 +14,12 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CoreModule } from '../core/core.module';
+import { LoginComponent } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
+    LoginComponent,
     AboutPage,
     ContactPage,
     HomePage,
@@ -36,6 +38,7 @@ import { CoreModule } from '../core/core.module';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    LoginComponent,
     AboutPage,
     ContactPage,
     HomePage,
