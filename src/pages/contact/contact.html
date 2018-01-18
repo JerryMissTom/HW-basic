@@ -7,11 +7,34 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <div class="content">
+    <div class="left">
+      <article class="search-field space-between" [class.ios-list-header]="version==='ios'" [class.android-list-header]="version==='android'">
+        <section class="space-between  search">
+          <ion-icon name="search"></ion-icon>
+          <input class="keyword" type="text" [(ngModel)]='searchWord' (input)="onInput($event)">
+          <ion-icon name="ios-close-circle-outline" *ngIf="searchWord" (click)="onClear($event)"></ion-icon>
+        </section>
+      </article>
+      <article class="contact-list" #list [class.android-list-top]="version==='android'" [class.ios-list-bottom]="version==='ios'">
+        <section class="item" *ngFor="let item of contacts">
+          <ng-container [ngSwitch]="item.type">
+            <div class="index-item" [id]="item.index" *ngSwitchCase="0">
+              {{item.index}}
+            </div>
+            <div class="contact-item space-between" *ngSwitchCase="1">
+              <span class="first-letter"> {{item.firstLetter}}</span>
+              <span class="contact-name"> {{item.name}}</span>
+              <span class="contact-phone"> {{item.phone}}</span>
+            </div>
+          </ng-container>
+        </section>
+      </article>
+    </div>
+    <div class="nav" [class.android-nav]="version==='android'" [class.ios-nav]="version==='ios'">
+      <ul>
+        <li *ngFor="let item of letters" (click)="scrollTo(item)">{{item}}</li>
+      </ul>
+    </div>
+  </div>
 </ion-content>
