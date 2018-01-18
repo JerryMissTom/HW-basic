@@ -1,11 +1,10 @@
-<ion-tabs>
+<ion-tabs #myTabs>
   <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
 </ion-tabs>
 
-!
-<!-- 下方是自定义Tab图标的示例，需要修改tabIcon -->
+<!-- 下方是自定义Tab图标的示例，需要修改tabIcon，具体设计见 variables.scss-->
 <!-- <ion-tabs>
   <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="custom-home"></ion-tab>
   <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="custom-about"></ion-tab>
