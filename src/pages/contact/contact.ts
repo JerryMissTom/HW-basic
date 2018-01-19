@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { NavController, LoadingController, Events, Content } from 'ionic-angular';
+import { NavController, LoadingController, Events, Content, ToastController } from 'ionic-angular';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/debounceTime';
 import { Observable } from 'rxjs/Observable';
@@ -36,7 +36,8 @@ export class ContactPage {
     private loadingCtrl: LoadingController,
     private elementRef: ElementRef,
     private util: Util,
-    private db: DBService
+    private db: DBService,
+    private toastCtrl: ToastController
   ) {
     this.version = this.util.getNavigator();
     this.searchWord = '';
@@ -86,6 +87,12 @@ export class ContactPage {
   }
 
   private scrollTo(letter) {
+
+    this.toastCtrl.create({
+      message: letter,
+      duration: 1000,
+      position: 'middle'
+    }).present();
 
     if (letter === '#') {
       letter = '\\#';
