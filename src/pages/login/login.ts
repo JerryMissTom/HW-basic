@@ -14,9 +14,7 @@ export class LoginComponent {
 
   }
 
-  toHome() {
-    console.log('11');
-    
+  toHome() {  
     this.navCtrl.setRoot(TabsPage);
   }
 }
