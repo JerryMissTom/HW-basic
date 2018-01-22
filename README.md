@@ -30,7 +30,7 @@ git clone https://github.com/JerryMissTom/HW-basic.git
 // 项目根目录下：
 npm install
 
-//安装 App Version 插件
+//安装 App Version 插件
 ionic cordova plugin add cordova-plugin-app-version
 
 //安装 Keyboard 插件
@@ -64,11 +64,11 @@ ionic cordova build ios --prod
 然后使用 `Xcode` 打开项目下 `platform/ios` 文件夹进行签名打包
 
 #### 调试
-浏览器调试，适合调试界面和接口
+浏览器调试，适合调试界面和接口
 ```
 ionic serve
 ```
 
 安卓调试，适合调试原生功能
 
-打开手机的开发者选项和通过USB调试，然后执行 `ionic cordova run android` 安装至手机并运行，打开Chrome浏览器，在地址栏输入 `chrome://inspect`（第一次打开需要翻墙），可以看到需要调试的APP。
+打开手机的开发者选项和通过USB调试，然后执行 `ionic cordova run android` 安装至手机并运行，打开Chrome浏览器，在地址栏输入 `chrome://inspect`（第一次打开需要翻墙），可以看到需要调试的APP。
