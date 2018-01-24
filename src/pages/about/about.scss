@@ -1,3 +1,23 @@
 page-about {
-
+  .user-header {
+    width: 100%;
+    height: rem(100);
+    flex-direction: column;
+    margin: rem(20) 0;
+    .avatar {
+      width: rem(80);
+      height: rem(80);
+      background: #488aff;
+      border-radius: 100%;
+    }
+  }
+  .first-item {
+    border-top: #ececec solid rem(1);
+  }
+  .item {
+    width: 100%;
+    height: rem(50);
+    padding: 0 rem(10);
+    border-bottom: #ececec solid rem(1);
+  }
 }

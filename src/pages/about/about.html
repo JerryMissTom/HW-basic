@@ -6,6 +6,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <div class="user-header space-between">
+    <span class="avatar"></span>
+    <span class="name">JerryMissTom</span>
+  </div>
+  <div class="space-between item first-item">
+    <span>版本号</span>
+    <span>1.1</span>
+  </div>
+  <div class="space-between item " tappable (click)="toUserPage()">
+    <span>用户信息</span>
+    <ion-icon name="arrow-forward"></ion-icon>
+  </div>
 </ion-content>

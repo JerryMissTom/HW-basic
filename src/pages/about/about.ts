@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+//import { AppVersion } from '@ionic-native/app-version';
 
 @Component({
   selector: 'page-about',
@@ -7,8 +8,17 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  private version;
+  constructor(
+    public navCtrl: NavController,
+  ) {
+    // this.app.getVersionNumber().then(num => {
+    //   this.version = this.version + num;
+    // });
+  }
 
+  private toUserPage() {
+    this.navCtrl.push('UserInfoPage');
   }
 
 }
