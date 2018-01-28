@@ -1,0 +1,17 @@
+page-user-info {
+  .item {
+    width: 100%;
+    height: rem(50);
+    padding: 0 rem(10);
+    border-bottom: #ececec solid rem(1);
+  }
+
+  .login-out {
+    width: 50%;
+    height: rem(30);
+    margin-top: rem(100);
+    color: #488aff;
+    font-size: 20px;
+    border-radius: 5%;
+  }
+}
