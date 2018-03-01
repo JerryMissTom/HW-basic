@@ -11,4 +11,7 @@ export class HomePage {
 
   }
 
+  toEchartsPage() {
+    this.navCtrl.push('EchartsPage');
+  }
 }

@@ -2,4 +2,15 @@ page-home {
     ul{
         margin: rem(10) 0;
     }
+
+    button{
+        width: auto;
+        height: rem(20);
+        font-size: 16px;
+        line-height: rem(20);
+        background: #488aff;
+    }
+    .devide{
+        margin-top: rem(20);
+    }
 }
