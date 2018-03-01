@@ -109,7 +109,7 @@ export class ContactPage {
 
     let ele = this.elementRef.nativeElement.querySelector('div#' + letter);
     if (ele) {
-      let s = this.elementRef.nativeElement.querySelector('div#' + letter).getBoundingClientRect();
+      let s = ele.getBoundingClientRect();
       this.content.scrollTo(0, s.top - topLocation, 300); // 这个是重点，Y轴移动相对第一个标签的位置
     }
   }
@@ -120,19 +120,19 @@ export class ContactPage {
       let sql = "select * from contact where name like '%" + text + "%'" + " or phone like '%" + text + "%'" + " order by index";
       console.log(sql);
       this.db.myDataBase.executeSql(sql, {}).then(data => {
-        console.log('获取数据成功');
+        console.log('查询' + text + '数据成功');
         this.contacts = this.setContracts(data);
       }).catch(erroe => {
-        console.log('获取数据失败');
+        console.log('查询' + text + '数据失败');
       });
     } else {
       let sql = "select * from contact order by index";
       console.log(sql);
       this.db.myDataBase.executeSql(sql, {}).then(data => {
-        console.log('获取数据成功');
+        console.log('获取所有数据成功');
         this.contacts = this.setContracts(data);
       }).catch(erroe => {
-        console.log('获取数据失败');
+        console.log('获取所有数据失败');
       });
     }
   }
@@ -220,7 +220,7 @@ export class ContactPage {
   }
 
   ionViewWillLeave() {
-    // 接触监听事件
+    // 解除监听事件
     this.keyboard.close();
     if (this.hideSubscription) {
       this.hideSubscription.unsubscribe();
